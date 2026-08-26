@@ -1,0 +1,15 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1060" cy="110" r="220" fill="#71717a" opacity="0.08" />
+  <circle cx="110" cy="560" r="180" fill="#71717a" opacity="0.06" />
+  <rect x="90" y="255" width="64" height="64" rx="16" fill="#27272a" stroke="#52525b" stroke-width="1.5" />
+  <text x="122" y="298" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#e4e4e7" text-anchor="middle">Y</text>
+  <text x="90" y="360" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#f4f4f5">Youssef El Beqqal</text>
+  <text x="90" y="404" font-family="Arial, sans-serif" font-size="22" fill="#71717a">Cover image coming soon</text>
+</svg>

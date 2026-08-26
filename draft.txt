@@ -1,0 +1,9 @@
+main title: The most important thing that I never forget working on Arsenal project
+
+- Dealing with cache in WEB
+- REST APIs, GraphQL APIs
+- Expo
+- Akamai cache
+- API performance
+- Monitoring
+- System scalling

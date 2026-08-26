@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
+import { SITE_NAME } from "@/lib/site";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
+const DEFAULT_COVER_IMAGE = "/blog/placeholder.svg";
 
 export type PostMeta = {
   slug: string;
@@ -13,6 +15,9 @@ export type PostMeta = {
   date: string;
   description: string;
   tags: string[];
+  author: string;
+  coverImage: string;
+  coverImageAlt: string;
 };
 
 export type Post = PostMeta & {
@@ -24,6 +29,9 @@ type Frontmatter = {
   date: string | Date;
   description: string;
   tags?: string[];
+  author?: string;
+  coverImage?: string;
+  coverImageAlt?: string;
 };
 
 function toDateString(date: string | Date): string {
@@ -48,6 +56,9 @@ function readPostMeta(filename: string): PostMeta {
     date: toDateString(frontmatter.date),
     description: frontmatter.description ?? "",
     tags: frontmatter.tags ?? [],
+    author: frontmatter.author ?? SITE_NAME,
+    coverImage: frontmatter.coverImage ?? DEFAULT_COVER_IMAGE,
+    coverImageAlt: frontmatter.coverImageAlt ?? frontmatter.title,
   };
 }
 
