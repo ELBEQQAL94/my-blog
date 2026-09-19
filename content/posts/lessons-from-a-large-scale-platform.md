@@ -4,8 +4,8 @@ metaTitle: Lessons From a Large-Scale Web Project
 date: 2026-08-26
 description: Notes on SEO, CDN caching, GraphQL, Expo, API performance, and monitoring from a real large-scale Next.js and React Native project.
 author: Youssef El Beqqal
-coverImage: /blog/placeholder.svg
-coverImageAlt: Lessons I'll Never Forget From a Large-Scale Web & Mobile Project
+coverImage: /blog/images/lessons-from-a-large-scale-platform.webp
+coverImageAlt: Abstract illustration of a distributed server network with glowing connections between nodes
 ---
 
 I spent a good chunk of the last while working on a large-scale platform: web
