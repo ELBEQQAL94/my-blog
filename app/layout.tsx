@@ -1,8 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { JsonLd } from "@/components/json-ld";
-import { LINKEDIN_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, X_URL } from "@/lib/site";
+import {
+  GA_MEASUREMENT_ID,
+  LINKEDIN_URL,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  X_URL,
+} from "@/lib/site";
 import { SiteNav } from "./site-nav";
 import "./globals.css";
 
@@ -95,6 +103,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </header>
         {children}
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
