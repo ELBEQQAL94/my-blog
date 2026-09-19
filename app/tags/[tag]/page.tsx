@@ -43,7 +43,7 @@ export default async function TagPage(props: PageProps<"/tags/[tag]">) {
               {post.title}
             </Link>
             <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-              {post.date}
+              <time dateTime={post.date}>{post.date}</time>
             </p>
             <p className="mt-2 text-zinc-600 dark:text-zinc-300">
               {post.description}

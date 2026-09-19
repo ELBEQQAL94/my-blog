@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LinkedInIcon, XIcon } from "@/components/social-icons";
 import { LINKEDIN_URL, X_URL } from "@/lib/site";
-import { ThemeToggle } from "./theme-toggle";
 
 type Section = "about" | "contact" | null;
 
@@ -96,7 +95,6 @@ export function SiteNav() {
       >
         <XIcon className="h-4 w-4" />
       </a>
-      <ThemeToggle />
     </nav>
   );
 }

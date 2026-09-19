@@ -16,16 +16,17 @@ export async function generateMetadata(
   const { slug } = await props.params;
   const post = await getPostBySlug(slug);
   const ogImage = `${SITE_URL}/blog/${post.slug}/opengraph-image`;
+  const title = post.metaTitle ?? post.title;
 
   return {
-    title: post.title,
+    title,
     description: post.description,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
     openGraph: {
       type: "article",
-      title: post.title,
+      title,
       description: post.description,
       publishedTime: post.date,
       url: `${SITE_URL}/blog/${post.slug}`,
@@ -33,7 +34,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title,
       description: post.description,
       images: [ogImage],
     },

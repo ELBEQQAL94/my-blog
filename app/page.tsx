@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_EMAIL, LINKEDIN_URL, X_URL } from "@/lib/site";
-import { ClientsSection } from "./clients-section";
 import { ExperienceTimeline } from "./experience-timeline";
 
 const experience = [
@@ -115,13 +114,6 @@ export default function Home() {
 
       <section className="flex flex-col gap-6">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-          Clients
-        </h2>
-        <ClientsSection />
-      </section>
-
-      <section className="flex flex-col gap-6">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
           Skills
         </h2>
         <div className="flex flex-col gap-4">
@@ -149,9 +141,6 @@ export default function Home() {
         <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
           Contact
         </h2>
-        <p className="text-zinc-600 dark:text-zinc-300">
-          Open to Tech Lead and AI Engineering opportunities.
-        </p>
         <div className="flex flex-wrap gap-4 text-sm">
           <a
             href={`mailto:${CONTACT_EMAIL}`}

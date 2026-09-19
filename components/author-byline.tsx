@@ -31,7 +31,12 @@ export function AuthorByline({
         ) : (
           <span className="text-zinc-700 dark:text-zinc-300">{name}</span>
         )}
-        {date && <> · {date}</>}
+        {date && (
+          <>
+            {" "}
+            · <time dateTime={date}>{date}</time>
+          </>
+        )}
       </p>
     </div>
   );

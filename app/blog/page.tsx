@@ -5,7 +5,7 @@ import { getAllPosts } from "@/lib/posts";
 import { AuthorByline } from "@/components/author-byline";
 
 export const metadata: Metadata = {
-  title: "Writing",
+  title: "Blog",
   description: "Posts by Youssef El Beqqal.",
   alternates: {
     canonical: "/blog",
@@ -17,7 +17,7 @@ export default function BlogIndexPage() {
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-12 px-6 py-20">
-      <h1 className="text-4xl font-semibold tracking-tight">Writing</h1>
+      <h1 className="text-4xl font-semibold tracking-tight">Blog</h1>
       <ul className="flex flex-col gap-10">
         {posts.map((post, index) => (
           <li key={post.slug}>

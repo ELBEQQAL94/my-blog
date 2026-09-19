@@ -12,6 +12,8 @@ const DEFAULT_COVER_IMAGE = "/blog/placeholder.svg";
 export type PostMeta = {
   slug: string;
   title: string;
+  /** Shorter title for <title>/OG when `title` would exceed the ~60-char rendered budget. Falls back to `title`. */
+  metaTitle?: string;
   date: string;
   description: string;
   tags: string[];
@@ -26,6 +28,7 @@ export type Post = PostMeta & {
 
 type Frontmatter = {
   title: string;
+  metaTitle?: string;
   date: string | Date;
   description: string;
   tags?: string[];
@@ -53,6 +56,7 @@ function readPostMeta(filename: string): PostMeta {
   return {
     slug,
     title: frontmatter.title,
+    metaTitle: frontmatter.metaTitle,
     date: toDateString(frontmatter.date),
     description: frontmatter.description ?? "",
     tags: frontmatter.tags ?? [],

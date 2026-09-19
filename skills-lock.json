@@ -6,6 +6,18 @@
       "sourceType": "github",
       "skillPath": "skills/brainstorming/SKILL.md",
       "computedHash": "b58d55b64742ecd37923985ec7bdfbe678ffbcb9895562abd28c0a32dcacd7fb"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "a9e52ffc97e9d8fdda35a6fb3967ace6fbc1ae3a0b7703774ad077fcf1e27153"
+    },
+    "llm-seo": {
+      "source": "montagao/skills",
+      "sourceType": "github",
+      "skillPath": "llm-seo/SKILL.md",
+      "computedHash": "43aa2a68ec1cdc20271fcb20462fdcaa4b675ae4e9af5cae32d68505baae2ab4"
     }
   }
 }
