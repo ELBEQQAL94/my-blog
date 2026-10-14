@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CONTACT_EMAIL, LINKEDIN_URL, X_URL } from "@/lib/site";
+import { CALENDLY_URL, LINKEDIN_URL, X_URL } from "@/lib/site";
 import { ExperienceTimeline } from "./experience-timeline";
 
 const experience = [
@@ -80,7 +80,9 @@ export default function Home() {
           Youssef El Beqqal
         </h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-300">
-          Tech Lead · Full Stack Engineer · AI Engineer
+          I help companies ship production AI systems: RAG pipelines,
+          multi-agent architectures, and LLM workflows that actually work at
+          scale.
         </p>
         <p className="text-zinc-500 dark:text-zinc-400">
           I lead engineering teams building enterprise AI systems and
@@ -89,12 +91,35 @@ export default function Home() {
         </p>
       </section>
 
+      <section id="work-with-me" className="flex scroll-mt-28 flex-col gap-4">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          Work with me
+        </h2>
+        <p className="text-zinc-600 dark:text-zinc-300">
+          I&apos;m available for fractional AI engineering engagements and
+          project-based work with US and European companies. If you&apos;re
+          building a RAG system, deploying AI agents, or integrating LLMs into
+          your product and need a senior engineer who has done this in
+          production, let&apos;s talk.
+        </p>
+        <div className="flex justify-center">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full bg-zinc-900 px-5 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+          >
+            Book a 20-minute call
+          </a>
+        </div>
+      </section>
+
       <section id="about" className="flex scroll-mt-28 flex-col gap-4">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
           About
         </h2>
         <p className="text-zinc-600 dark:text-zinc-300">
-          I&apos;m a Tech Lead with 5+ years building enterprise AI systems
+          I&apos;m a Tech Lead with 7+ years building enterprise AI systems
           and high-traffic platforms at global scale. I currently lead
           technical delivery for a globally recognised sports platform
           serving millions of fans, and previously built production AI agent
@@ -110,6 +135,48 @@ export default function Home() {
           Experience
         </h2>
         <ExperienceTimeline items={experience} />
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          Case Study
+        </h2>
+        <h3 className="text-lg font-semibold tracking-tight">
+          Multi-agent RAG system for a global sports platform
+        </h3>
+        <p className="text-zinc-600 dark:text-zinc-300">
+          Arsenal FC&apos;s internal teams were spending too much time manually
+          retrieving information across three separate business domains:
+          customer support cases, historical match data for content editors,
+          and internal policy documentation.
+        </p>
+        <p className="text-zinc-600 dark:text-zinc-300">
+          I designed and built a multi-agent RAG architecture where each
+          domain has its own dedicated agent, retrieval pipeline, and vector
+          store namespace. A central router directs queries to the correct
+          agent using LangGraph. I moved the system from an initial monolithic
+          agent design to this specialized architecture, which significantly
+          reduced hallucination rates and improved response accuracy across
+          all three domains. The system is deployed on AWS and monitored in
+          production using LangSmith.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {[
+            "LangChain",
+            "LangGraph",
+            "Python",
+            "AWS",
+            "Pinecone",
+            "LangSmith",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </section>
 
       <section className="flex flex-col gap-6">
@@ -143,10 +210,12 @@ export default function Home() {
         </h2>
         <div className="flex flex-wrap gap-4 text-sm">
           <a
-            href={`mailto:${CONTACT_EMAIL}`}
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-medium hover:underline"
           >
-            {CONTACT_EMAIL}
+            Book a call
           </a>
           <a
             href={LINKEDIN_URL}

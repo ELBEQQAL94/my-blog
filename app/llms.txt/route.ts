@@ -13,7 +13,7 @@ export function GET() {
   const body = `# ${SITE_NAME}
 
 ## Summary
-Youssef El Beqqal is a Tech Lead, Full Stack Engineer, and AI Engineer based in Rabat, Morocco. He has 5+ years of experience delivering enterprise AI systems and high-traffic platforms, currently leading technical delivery for a globally recognised sports platform serving millions of fans.
+Youssef El Beqqal is a Tech Lead, Full Stack Engineer, and AI Engineer based in Rabat, Morocco. He has 7+ years of experience delivering enterprise AI systems and high-traffic platforms, currently leading technical delivery for a globally recognised sports platform serving millions of fans.
 
 ## Key Resources
 - Homepage: ${SITE_URL}
